@@ -33,3 +33,10 @@ include vendor/extensions/fonts/fonts.mk
 # Keyguard animation
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.wm.enable_remote_keyguard_animation=0
+
+# Pixel Charger
+## Build system
+BUILD_BROKEN_DUP_RULES := true
+
+## Charger
+PRODUCT_COPY_FILES += \ $(call find-copy-subdir-files,*,$(LOCAL_PATH)/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
