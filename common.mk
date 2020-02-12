@@ -42,3 +42,15 @@ ifeq ($(TARGET_USES_PIXEL_CHARGER), true)
 ## Charger
 PRODUCT_COPY_FILES += \ $(call find-copy-subdir-files,*,$(LOCAL_PATH)/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
 endif
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/media,$(TARGET_COPY_OUT_PRODUCT)/media)
+
+PRODUCT_PRODUCT_PROPERTIES := \
+    ro.config.ringtone=Your_new_adventure.ogg \
+    ro.config.notification_sound=Eureka.ogg \
+    ro.config.alarm_alert=Fresh_start.ogg
+
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt

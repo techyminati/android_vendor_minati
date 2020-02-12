@@ -1,0 +1,9 @@
+android_app_import {
+    name: "SoundPickerPrebuilt",
+    apk: "SoundPickerPrebuilt.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
