@@ -7,12 +7,18 @@
 
 # Build support for extras
 PRODUCT_PACKAGES += \
-	Camera \
 	ThemePicker \
 	AOSPDialerExtensions \
 	AOSPKeyboardExtensions \
 	FrameworkExtensions \
 	SystemUIExtensions
+
+# Camera
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
+# Set compiler filter "verify" and disable AOT-compilation in dexpreopt
+RELAX_USES_LIBRARY_CHECK := true
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
