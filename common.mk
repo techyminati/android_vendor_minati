@@ -66,3 +66,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
     ro.surface_flinger.supports_background_blur=1
 endif
+
+# ADB
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
