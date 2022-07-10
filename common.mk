@@ -4,6 +4,8 @@
 # SPDX-License-Identifer: Apache-2.0
 #
 
+# Warn
+$(warning Extra Flavour for build is inherited, if you dont want this stop including vendor/minati/common.mk)
 
 # Build support for extras
 PRODUCT_PACKAGES += \
