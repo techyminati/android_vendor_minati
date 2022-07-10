@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
 	AOSPDialerExtensions \
 	AOSPKeyboardExtensions \
 	FrameworkExtensions \
-	SystemUIExtensions
+	SystemUIExtensions \
+	LatinIME
 
 # Camera
 PRODUCT_PACKAGES += \
