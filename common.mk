@@ -34,7 +34,7 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
 # Font
-include vendor/extensions/fonts/fonts.mk
+include vendor/minati/fonts/fonts.mk
 
 # Keyguard animation
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
