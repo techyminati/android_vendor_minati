@@ -72,3 +72,9 @@ endif
 ifeq ($(TARGET_BUILD_VARIANT),user)
     PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
+
+# GMS
+ENABLE_GMS ?= true
+ifeq ($(ENABLE_GMS), true)
+    $(call inherit-product, vendor/partner_gms/products/gms.mk)
+endif
