@@ -44,9 +44,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 BUILD_BROKEN_DUP_RULES := true
 
 # Pixel Charger
+LOCAL_PATH := vendor/minati
 ifeq ($(TARGET_USES_PIXEL_CHARGER), true)
 ## Charger
-PRODUCT_COPY_FILES += \ $(call find-copy-subdir-files,*,$(LOCAL_PATH)/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
+PRODUCT_COPY_FILES +=  $(call find-copy-subdir-files,*,$(LOCAL_PATH)/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
 endif
 
 # Audio
@@ -67,14 +68,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
     ro.surface_flinger.supports_background_blur=1
 endif
-
 # ADB
 ifeq ($(TARGET_BUILD_VARIANT),user)
     PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # GMS
-ENABLE_GMS ?= true
+ENABLE_GMS ?= false
 ifeq ($(ENABLE_GMS), true)
     $(call inherit-product, vendor/partner_gms/products/gms.mk)
 endif
